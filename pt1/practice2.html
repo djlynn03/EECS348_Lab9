@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(212 219 226);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 25px;
+        }
+
+        #profile-image {
+            border-radius: 25px;
+        }
+
+        .container {
+            background-color: white;
+            width: fit-content;
+            border-radius: 25px;
+            padding: 25px;
+            height: fit-content;
+        }
+
+        h1 {
+            margin-top: 0px;
+        }
+        .green{
+            color: green;
+        }
+        p span{
+            font-weight: bold;
+            font-size: 16px;
+        }
+        a{
+            color: blue;
+        }
+        #text-container{
+            border: 0px solid black;
+        }
+    </style>
+    <script>
+        function changeColors(){
+            var text_red = document.getElementsByTagName("input")[0].value;
+            var text_green = document.getElementsByTagName("input")[1].value;
+            var text_blue = document.getElementsByTagName("input")[2].value;
+            document.getElementById('text-container').style.color = "rgb(" + text_red + ", " + text_green + ", " + text_blue + ")";
+
+            var text_red = document.getElementsByTagName("input")[3].value;
+            var text_green = document.getElementsByTagName("input")[4].value;
+            var text_blue = document.getElementsByTagName("input")[5].value;
+            var border_width = document.getElementsByTagName("input")[6].value;
+            document.getElementById('text-container').style.borderColor = "rgb(" + text_red + ", " + text_green + ", " + text_blue + ")";
+            document.getElementById('text-container').style.borderWidth = border_width + "px";
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container" id="text-container">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat elementum mi, eu interdum risus posuere a. Duis dictum justo lorem, vitae suscipit orci scelerisque vitae. Proin nec velit porta, pellentesque neque sed, placerat odio. Nullam ut tincidunt magna. Suspendisse fringilla tellus quis dui volutpat, nec consequat quam tincidunt. Sed elementum nisi a tellus sodales, non convallis massa suscipit. Vivamus blandit leo at elementum semper. Maecenas efficitur elementum purus, quis luctus enim fermentum sed. In consectetur aliquam augue, elementum aliquam augue lobortis sit amet. In venenatis in lorem non tincidunt. Donec non molestie quam, nec fringilla mauris. Fusce dignissim pulvinar mauris a porttitor. Aenean vel tristique metus, vel finibus tellus. Pellentesque non ipsum non lorem auctor maximus.
+        <br><br>
+        Etiam sed pretium ipsum. Aenean consectetur nec mauris sit amet vehicula. Praesent faucibus id ex commodo sollicitudin. Morbi ac facilisis mi. Ut eget ipsum accumsan, tincidunt lorem ac, commodo odio. Vivamus iaculis sem dolor, semper auctor sem interdum sed. Ut quis interdum risus. Etiam finibus tempus nulla, sed laoreet lectus imperdiet aliquam. Sed eget laoreet est, fermentum egestas massa. Nullam vel viverra justo. Duis auctor sollicitudin eros.
+        <br><br>
+        Vivamus sed augue vestibulum, feugiat velit ac, ultricies ex. Quisque imperdiet, augue id accumsan ornare, turpis eros semper nibh, eget sollicitudin eros nisl sed lacus. Proin a felis et odio vestibulum facilisis vel in ante. Pellentesque viverra eu libero id rutrum. Fusce vel purus quis nisi mollis consequat eu ut mauris. Maecenas velit magna, tempus in suscipit a, egestas sed odio. Vivamus vehicula orci eu neque vestibulum, ac dapibus ex pulvinar. Cras ullamcorper blandit mauris, eget fringilla dolor condimentum non. Vestibulum iaculis convallis scelerisque.
+        <br><br>
+        Proin molestie magna at mi convallis venenatis. Sed finibus, arcu vitae aliquet vehicula, risus leo egestas metus, non blandit nunc eros vel erat. Nunc nec arcu eu dolor porta eleifend at vitae nibh. Donec cursus fringilla urna vitae pulvinar. Donec tempor erat vitae turpis ornare, quis luctus purus feugiat. Phasellus est ante, ultricies ac tempor sit amet, posuere et quam. Vivamus non suscipit turpis. Nulla eu turpis et leo mattis pulvinar id varius justo. Integer eu elementum leo, vel accumsan augue. Duis tellus ante, posuere ut interdum in, tristique non neque. Integer vehicula orci et vulputate fermentum. Nullam eget urna sit amet eros rutrum accumsan. Phasellus et libero erat. Integer aliquet accumsan nibh, et placerat arcu fermentum ut. Nulla ut congue libero. Morbi vitae nisi in nisi egestas blandit.
+        <br><br>
+        Duis eleifend varius ipsum, sit amet congue lacus suscipit ultrices. Fusce dapibus dolor tortor, at rutrum lectus auctor sit amet. Suspendisse commodo fringilla neque sit amet blandit. Vestibulum tincidunt sit amet nisi et fringilla. Donec a magna convallis nibh rutrum ultricies in quis justo. Suspendisse id porttitor diam. Mauris sodales nisl sodales elit placerat interdum. Proin in placerat libero. In congue tempus nisi, vitae congue nibh cursus nec. Suspendisse mollis nisi velit, sit amet interdum lacus varius at. Donec pulvinar euismod posuere. Etiam elementum libero in velit malesuada, sit amet porttitor dui congue. Aliquam ligula nisi, varius in eros vitae, imperdiet tincidunt sem. Duis id viverra eros. Duis efficitur diam nec libero porttitor, non facilisis urna dapibus.
+    </div>
+    <div class="container">
+        text:<br>
+        <input type="number" max="255" placeholder="red">
+        <input type="number" max="255" placeholder="green">
+        <input type="number" max="255" placeholder="blue">
+        <br>
+        <br>
+        border:<br>
+        <input type="number" max="255" placeholder="red">
+        <input type="number" max="255" placeholder="green">
+        <input type="number" max="255" placeholder="blue">
+        <input type="number" placeholder="width">
+        <br><br>
+        <button onclick="changeColors()">Change Style</button>
+    </div>
+</body>
+
+</html>

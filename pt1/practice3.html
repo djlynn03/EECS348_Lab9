@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(212 219 226);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 25px;
+        }
+
+        #profile-image {
+            border-radius: 25px;
+        }
+
+        .container {
+            background-color: white;
+            width: fit-content;
+            border-radius: 25px;
+            padding: 25px;
+            height: fit-content;
+        }
+
+        h1 {
+            margin-top: 0px;
+        }
+        .green{
+            color: green;
+        }
+        .red{
+            color: red;
+        }
+        p span{
+            font-weight: bold;
+            font-size: 16px;
+        }
+        a{
+            color: blue;
+        }
+        #text-container{
+            border: 0px solid black;
+        }
+        #nomatch, #length{
+            display: none;
+            color: red;
+        }
+        #match{
+            display: none;
+            color: green;
+        }
+    </style>
+    <script>
+        function validatePasswords(){
+            var p1 = document.getElementById("p1");
+            var p2 = document.getElementById("p2");
+            var nomatch = document.getElementById("nomatch");
+            var l = document.getElementById("length");
+            var m = document.getElementById("match");
+
+            if (p1.value != p2.value){
+                nomatch.style.display = "block";
+            }else{
+                nomatch.style.display = "none";
+            }
+            if (p1.value.length < 8){
+                l.style.display = "block";
+            }else{
+                l.style.display = "none";
+            }
+            if (nomatch.style.display === l.style.display && l.style.display === "none"){
+                m.style.display = "block";
+            }else{
+                m.style.display = "none";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <label for="p1">Password</label><br>
+        <input id="p1" type="password" oninput="validatePasswords()"> <br><br>
+        <label for="p2">Re-enter Password</label><br>
+        <input id="p2" type="password" oninput="validatePasswords()">
+        <p id="nomatch">passwords do not match</p>
+        <p id="length">password must be at least 8 characters long</p>
+        <p id="match">password is valid</p>
+    </div>
+</body>
+
+</html>
